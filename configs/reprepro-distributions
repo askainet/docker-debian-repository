@@ -1,17 +1,17 @@
-Origin: Glenn Y. Rolland
-Label: Glenux Truc
+Origin: Dmitrii V. Zolotov
+Label: IT Department Herzen University
 Suite: unstable
 Codename: sid
 Version: 3.1
-Architectures: i386 amd64 powerpc source
+Architectures: amd64 source
 Components: main non-free contrib
-Description: Glenux.Net Repository Unstable
+Description: Herzen University Unstable
 
-Origin: Glenn Y. Rolland
-Label: Glenux Truc
-Suite: testing
-Codename: wheezy
+Origin: Dmitrii V. Zolotov
+Label: IT Department Herzen University
+Suite: stable
+Codename: jessie
 Version: 3.1
-Architectures: i386 amd64 powerpc source
+Architectures: amd64 source
 Components: main non-free contrib
-Description: Glenux.Net Repository Testing
+Description: Herzen University Repository
