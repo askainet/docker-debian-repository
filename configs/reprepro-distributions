@@ -1,17 +1,8 @@
-Origin: Dmitrii V. Zolotov
-Label: IT Department Herzen University
-Suite: unstable
-Codename: sid
-Version: 3.1
-Architectures: amd64 source
-Components: main non-free contrib
-Description: Herzen University Unstable
-
-Origin: Dmitrii V. Zolotov
-Label: IT Department Herzen University
+Origin: devops@auto1.com
+Label: Auto1 DevOps
 Suite: stable
 Codename: jessie
 Version: 3.1
 Architectures: amd64 source
 Components: main non-free contrib
-Description: Herzen University Repository
+Description: Auto1 DevOps Repository
