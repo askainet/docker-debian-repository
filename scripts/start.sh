@@ -38,7 +38,6 @@ if [ -f "${GPG_SOURCE}/reprepro_public.gpg" ]
 then
     gpg --import ${GPG_SOURCE}/reprepro_public.gpg
 fi
-chown -R reprepro:reprepro ${GNUPGHOME}
 
 # load crontab for root
 crontab <<EOF

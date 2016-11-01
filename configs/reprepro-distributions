@@ -6,3 +6,4 @@ Version: 3.1
 Architectures: amd64 source
 Components: main non-free contrib
 Description: Auto1 DevOps Repository
+SignWith: F1DE02B6
