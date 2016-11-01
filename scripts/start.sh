@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Many thanks to John Fink <john.fink@gmail.com> for the 
-# inspiration and to his great work on docker-wordpress' 
+# Many thanks to John Fink <john.fink@gmail.com> for the
+# inspiration and to his great work on docker-wordpress'
 
 # reset root password
 
@@ -11,7 +11,7 @@ mkdir /home/user
 useradd -d /home/user -s /bin/bash user
 chown -R user /home/user
 chown -R user /docker/incoming
-	
+
 echo "user:$SSH_USERPASS" | chpasswd
 echo "ssh user password: $SSH_USERPASS"
 
@@ -24,6 +24,19 @@ for key in /docker/keys/*.pub ; do
 	cat $key >> /home/user/.ssh/authorized_keys
 done
 chown -R user /home/user/.ssh
+
+# import GPG keys
+GPG_SOURCE="/docker/gpg"
+export GNUPGHOME="/var/lib/reprepro/gpg"
+mkdir p ${GNUPGHOME}
+
+if [ -f "${GPG_SOURCE}/reprepro_private.gpg" ]
+    gpg --allow-secret-key-import --import ${GPG_SOURCE}/reprepro_private.gpg
+then
+if [ -f "${GPG_SOURCE}/reprepro_public.gpg" ]
+    gpg --import ${GPG_SOURCE}/reprepro_public.gpg
+fi
+chown -R reprepro:reprepro ${GNUPGHOME}
 
 # load crontab for root
 crontab <<EOF

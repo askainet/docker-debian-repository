@@ -25,6 +25,9 @@ ADD scripts/reprepro-import.sh /usr/local/sbin/reprepro-import
 RUN chmod 755 /usr/local/sbin/reprepro-import
 RUN mkdir -p /var/lib/reprepro/conf
 ADD configs/reprepro-distributions /var/lib/reprepro/conf/distributions
+ADD configs/reprepro-options /var/lib/reprepro/conf/options
+ADD configs/reprepro-incoming /var/lib/reprepro/conf/incoming
+
 
 # Configure nginx
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
@@ -47,7 +50,7 @@ ENV DEBIAN_FRONTEND newt
 ADD scripts/start.sh /usr/local/sbin/start
 RUN chmod 755 /usr/local/sbin/start
 
-VOLUME ["/docker/keys", "/docker/incoming", "/repository"]
+VOLUME ["/docker/keys", "/docker/incoming", "/docker/gpg", "/repository"]
 
 EXPOSE 80
 EXPOSE 22

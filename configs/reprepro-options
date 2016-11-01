@@ -1,0 +1,3 @@
+verbose
+basedir /var/lib/reprepro
+gnupghome /var/lib/reprepro/gpg
