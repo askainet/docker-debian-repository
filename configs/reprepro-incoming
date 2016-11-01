@@ -1,0 +1,4 @@
+Name: incoming
+IncomingDir: /docker/incoming
+TempDir: /tmp
+Allow: stable>jessie
