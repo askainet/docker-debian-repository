@@ -31,9 +31,11 @@ export GNUPGHOME="/var/lib/reprepro/gpg"
 mkdir p ${GNUPGHOME}
 
 if [ -f "${GPG_SOURCE}/reprepro_private.gpg" ]
-    gpg --allow-secret-key-import --import ${GPG_SOURCE}/reprepro_private.gpg
 then
+    gpg --allow-secret-key-import --import ${GPG_SOURCE}/reprepro_private.gpg
+fi
 if [ -f "${GPG_SOURCE}/reprepro_public.gpg" ]
+then
     gpg --import ${GPG_SOURCE}/reprepro_public.gpg
 fi
 chown -R reprepro:reprepro ${GNUPGHOME}
