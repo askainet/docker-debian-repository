@@ -13,10 +13,6 @@ Usage
 
 ### Running the box
 
-Get the box from docker's automated builds
-
-	docker pull askainet/docker-debian-repository
-
 Run with 22 and 80 ports opened.
 Share a directory containing your public SSH keys for uploading packages.
 Share a directory containing your GPG key pair for signing packages.
