@@ -1,3 +1,4 @@
 verbose
 basedir /var/lib/reprepro
+outdir /repository/debian
 gnupghome /var/lib/reprepro/gpg
