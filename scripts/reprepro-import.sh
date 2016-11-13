@@ -3,6 +3,8 @@
 BASEDIR=/var/lib/reprepro
 OUTDIR=/repository/debian
 
+reprepro -V --basedir $BASEDIR --outdir $OUTDIR createsymlinks oldstable
+reprepro -V --basedir $BASEDIR --outdir $OUTDIR createsymlinks wheezy
 reprepro -V --basedir $BASEDIR --outdir $OUTDIR createsymlinks stable
 reprepro -V --basedir $BASEDIR --outdir $OUTDIR createsymlinks jessie
 

@@ -1,5 +1,15 @@
 Origin: devops@auto1.com
 Label: Auto1 DevOps
+Suite: oldstable
+Codename: wheezy
+Version: 3.1
+Architectures: amd64 source
+Components: main non-free contrib
+Description: Auto1 DevOps Repository
+SignWith: yes
+
+Origin: devops@auto1.com
+Label: Auto1 DevOps
 Suite: stable
 Codename: jessie
 Version: 3.1
